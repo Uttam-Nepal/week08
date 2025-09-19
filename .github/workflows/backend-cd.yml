@@ -46,9 +46,9 @@ jobs:
         run: |
           az aks get-credentials --resource-group sit722-rg --name sit722aks --overwrite-existing
 
-      - name: Attach ACR
-        run: |
-          az aks update --name sit722aks --resource-group sit722-rg --attach-acr sit722acr12345
+      # - name: Attach ACR
+      #   run: |
+      #     az aks update --name sit722aks --resource-group sit722-rg --attach-acr sit722acr12345
 
       - name: Deploy Backend Infrastructure (Namespace, ConfigMaps, Secrets, Databases)
         run: |
